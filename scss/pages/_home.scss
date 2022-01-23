@@ -1,0 +1,86 @@
+.about {
+  padding: $section-padding;
+  background-color: $color2;
+
+  @include watermark("about me");
+
+  h2 {
+    span {
+      @include dot-appear;
+    }
+  }
+
+  .about__image {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    line-height: 0;
+    color: $watermark-color;
+    pointer-events: none;
+    @include xl {
+      display: block;
+    }
+    font-size: 25vw;
+    @include flying-watermark-animation;
+  }
+
+  .about__text {
+    @include md {
+      max-width: 50%;
+    }
+  }
+}
+
+.boxes {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+
+  padding: $section-padding;
+  padding-bottom: 10rem;
+
+  .boxes__box {
+    position: relative;
+    margin-bottom: 2rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      background: linear-gradient(0deg, $color1 10%, rgba(0, 0, 255, 0) 100%);
+    }
+
+    .box__text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem;
+      z-index: 1;
+      transition-duration: 0.3s;
+
+      p {
+        opacity: 0;
+        transition-duration: 0.3s;
+      }
+    }
+
+    &:hover {
+      .box__text {
+        bottom: 50%;
+        transform: translate(0, 50%);
+        p {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  @include watermark("boxes");
+}

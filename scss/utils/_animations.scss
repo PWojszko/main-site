@@ -1,0 +1,80 @@
+//dot appear
+@keyframes dot-appear {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@mixin dot-appear {
+  animation: dot-appear 2.5s steps(1) infinite;
+}
+
+//hero animation
+@keyframes hero-animation-1 {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(0deg) scale(4);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes hero-animation-2 {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@mixin hero-animation {
+  animation: hero-animation-1, hero-animation-2;
+  animation-duration: 2s, 2s;
+  animation-delay: 0s, 2s;
+  animation-iteration-count: 1, 1;
+  animation-timing-function: cubic-bezier(0.69, 1.365, 0.74, -0.595), ease-out;
+}
+
+// appear after nS
+@keyframes appear-delayed {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@mixin appear-delayed {
+  animation: appear-delayed 2.5s;
+}
+
+// flying </>
+@keyframes flying-watermark-animation {
+  0% {
+    right: 10%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+
+@mixin flying-watermark-animation {
+  animation: flying-watermark-animation 20s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}

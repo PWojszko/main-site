@@ -1,0 +1,72 @@
+.header__gotobottom {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  .gotobottom__line {
+    position: absolute;
+    width: 50%;
+    height: 20px;
+    background-color: $color0;
+    border-radius: 20px;
+    transition-duration: 0.3s;
+
+    &:nth-child(1) {
+      transform: rotate(45deg);
+      left: 10%;
+      top: 25%;
+    }
+    &:nth-child(2) {
+      transform: rotate(-45deg);
+      right: 10%;
+      top: 25%;
+    }
+    &:nth-child(3) {
+      transform: rotate(45deg);
+      left: 10%;
+      top: 60%;
+    }
+    &:nth-child(4) {
+      transform: rotate(-45deg);
+      right: 10%;
+      top: 60%;
+    }
+  }
+
+  &:hover {
+    .gotobottom__line {
+      &:nth-child(1) {
+        transform: rotate(90deg) translate(30px, 0);
+      }
+      &:nth-child(2) {
+        transform: rotate(-90deg) translate(-30px, 0);
+      }
+      &:nth-child(3) {
+        transform: rotate(45deg) translate(30px, 30px);
+      }
+      &:nth-child(4) {
+        transform: rotate(-45deg) translate(-30px, 30px);
+      }
+    }
+  }
+
+  @include appear-delayed;
+}
+
+// footer
+.footer__gototop {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  z-index: 1;
+  font-size: 4rem;
+  color: $color0;
+
+  &:hover {
+    color: $color3;
+  }
+}

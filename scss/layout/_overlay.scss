@@ -1,0 +1,107 @@
+.boxes__box-overlay__button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  z-index: 4;
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  .box-overlay__button__line {
+    width: 50%;
+    height: 5px;
+    background-color: $color0;
+    position: absolute;
+    transition-duration: 0.3s;
+
+    &.button__line--1 {
+      transform: rotate(0) translate(28px, 30px);
+    }
+    &.button__line--2 {
+      transform: rotate(90deg) translate(43px, -15px);
+    }
+    &.button__line--3 {
+      transform: rotate(0) translate(13px, 15px);
+    }
+    &.button__line--4 {
+      transform: rotate(90deg) translate(28px, 0px);
+    }
+  }
+
+  &:hover {
+    transform: translate(-5px, -5px);
+    .box-overlay__button__line {
+      &.button__line--1 {
+        transform: rotate(45deg) translate(27px, 10px);
+      }
+      &.button__line--2 {
+        transform: rotate(45deg) translate(27px, 10px);
+      }
+    }
+  }
+
+  &.boxes__box-overlay__button--active--true {
+    transform: rotate(45deg);
+    .box-overlay__button__line {
+      &.button__line--1 {
+        transform: rotate(0) translate(29px, 30px);
+      }
+      &.button__line--2 {
+        transform: rotate(90deg) translate(43px, -15px);
+      }
+      &.button__line--3 {
+        transform: rotate(90deg) translate(15px, -15px);
+      }
+      &.button__line--4 {
+        transform: rotate(0) translate(1px, 30px);
+      }
+    }
+
+    &:hover {
+      .box-overlay__button__line {
+        &.button__line--1 {
+          transform: rotate(0) translate(39px, 30px);
+        }
+        &.button__line--2 {
+          transform: rotate(90deg) translate(53px, -15px);
+        }
+        &.button__line--3 {
+          transform: rotate(90deg) translate(5px, -15px);
+        }
+        &.button__line--4 {
+          transform: rotate(0) translate(-9px, 30px);
+        }
+      }
+    }
+  }
+}
+
+.boxes__box-overlay {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  bottom: 0;
+  left: 100%;
+  transition-duration: 1s;
+  opacity: 0;
+  z-index: 3;
+  box-shadow: $box-shadow;
+  background-color: ($color3);
+
+  &.boxes__box-overlay--active--true {
+    top: 0;
+    left: 0;
+    opacity: 1;
+
+    &::after {
+      content: "overlay";
+      position: absolute;
+      bottom: -6rem;
+      left: -2rem;
+      font-size: 20rem;
+      white-space: nowrap;
+      color: $watermark-color;
+    }
+  }
+}

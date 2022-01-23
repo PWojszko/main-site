@@ -1,0 +1,56 @@
+.header__wheel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50vw;
+  min-width: 250px;
+  max-width: 500px;
+  height: 50vw;
+  min-height: 250px;
+  max-height: 500px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  @include hero-animation;
+
+  .wheel__dot {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: $color0;
+
+    &:nth-child(1) {
+      top: 14%;
+      left: 14%;
+    }
+    &:nth-child(2) {
+      top: 0%;
+      left: 50%;
+    }
+    &:nth-child(3) {
+      top: 14%;
+      left: 86%;
+    }
+    &:nth-child(4) {
+      top: 50%;
+      left: 0%;
+    }
+    &:nth-child(5) {
+      top: 50%;
+      left: 100%;
+    }
+    &:nth-child(6) {
+      top: 86%;
+      left: 14%;
+    }
+    &:nth-child(7) {
+      top: 100%;
+      left: 50%;
+    }
+    &:nth-child(8) {
+      top: 86%;
+      left: 86%;
+    }
+  }
+}

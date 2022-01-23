@@ -1,0 +1,15 @@
+.socials {
+  position: fixed;
+  right: -2rem;
+  top: 40%;
+  z-index: 1;
+
+  .socials__social {
+    transform: rotate(-90deg);
+
+    .social__text {
+      font-size: 2rem;
+      line-height: 0;
+    }
+  }
+}

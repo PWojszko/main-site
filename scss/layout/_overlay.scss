@@ -29,7 +29,11 @@
     }
   }
 
-  &:hover {
+  .box-overlay__button_lines {
+    transition-duration: 0.3s;
+  }
+
+  &:hover .box-overlay__button_lines {
     transform: translate(-5px, -5px);
     .box-overlay__button__line {
       &.button__line--1 {

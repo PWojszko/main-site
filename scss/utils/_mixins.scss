@@ -42,7 +42,7 @@ h1 {
 }
 */
 
-@mixin watermark($text) {
+@mixin watermark($text, $color: $watermark-color) {
   overflow: hidden;
   position: relative;
   box-shadow: $box-shadow;
@@ -53,6 +53,6 @@ h1 {
     left: -2rem;
     font-size: 20rem;
     white-space: nowrap;
-    color: $watermark-color;
+    color: $color;
   }
 }

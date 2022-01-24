@@ -1,22 +1,24 @@
 .about {
   padding: $section-padding;
-  background-color: $color2;
+  background-color: $color0;
+  color: $color1;
 
-  @include watermark("about me");
+  @include watermark("about me", rgba($color1, 0.1));
 
   h2 {
+    color: $color1;
     span {
       @include dot-appear;
     }
   }
 
   .about__image {
+    color: rgba($color1, 0.1);
     display: none;
     position: absolute;
     right: 0;
     top: 50%;
     line-height: 0;
-    color: $watermark-color;
     pointer-events: none;
     @include xl {
       display: block;

@@ -5,9 +5,7 @@ const Boxes = (props) => {
         <img src="images/box-1.jpg" alt="strona salonu fryzjerskiego" />
         <div className="box__text">
           <h2>Salon fryzjerski</h2>
-          <p>
-            Pierwszy projekt stworzony w czystym PHP
-          </p>
+          <p>Pierwszy projekt stworzony w czystym PHP</p>
         </div>
       </div>
       <div className="boxes__box">
@@ -42,10 +40,12 @@ const Boxes = (props) => {
             : ` boxes__box-overlay__button--active--${props.boxOverlayActive}`
         }`}
       >
-        <div className="box-overlay__button__line button__line--1"></div>
-        <div className="box-overlay__button__line button__line--2"></div>
-        <div className="box-overlay__button__line button__line--3"></div>
-        <div className="box-overlay__button__line button__line--4"></div>
+        <div className="box-overlay__button_lines">
+          <div className="box-overlay__button__line button__line--1"></div>
+          <div className="box-overlay__button__line button__line--2"></div>
+          <div className="box-overlay__button__line button__line--3"></div>
+          <div className="box-overlay__button__line button__line--4"></div>
+        </div>
       </div>
       <section
         className={`boxes__box-overlay${

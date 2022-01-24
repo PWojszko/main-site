@@ -275,17 +275,22 @@ h3 {
           transform: rotate(90deg) translate(28px, 0px);
 }
 
-.boxes__box-overlay__button:hover {
+.boxes__box-overlay__button .box-overlay__button_lines {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.boxes__box-overlay__button:hover .box-overlay__button_lines {
   -webkit-transform: translate(-5px, -5px);
           transform: translate(-5px, -5px);
 }
 
-.boxes__box-overlay__button:hover .box-overlay__button__line.button__line--1 {
+.boxes__box-overlay__button:hover .box-overlay__button_lines .box-overlay__button__line.button__line--1 {
   -webkit-transform: rotate(45deg) translate(27px, 10px);
           transform: rotate(45deg) translate(27px, 10px);
 }
 
-.boxes__box-overlay__button:hover .box-overlay__button__line.button__line--2 {
+.boxes__box-overlay__button:hover .box-overlay__button_lines .box-overlay__button__line.button__line--2 {
   -webkit-transform: rotate(45deg) translate(27px, 10px);
           transform: rotate(45deg) translate(27px, 10px);
 }
@@ -378,7 +383,7 @@ h3 {
 .dropdown .dropdown__line {
   width: 40px;
   height: 5px;
-  background: #c8c8c8;
+  background: #5599ff;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
   border-radius: 3px;
@@ -668,7 +673,8 @@ h3 {
 
 .about {
   padding: 40px;
-  background-color: #1a1c2b;
+  background-color: #c8c8c8;
+  color: #0c0d16;
   overflow: hidden;
   position: relative;
   -webkit-box-shadow: inset 0px -30px 30px -30px #000000;
@@ -682,7 +688,11 @@ h3 {
   left: -2rem;
   font-size: 20rem;
   white-space: nowrap;
-  color: rgba(255, 255, 255, 0.1);
+  color: rgba(12, 13, 22, 0.1);
+}
+
+.about h2 {
+  color: #0c0d16;
 }
 
 .about h2 span {
@@ -691,12 +701,12 @@ h3 {
 }
 
 .about .about__image {
+  color: rgba(12, 13, 22, 0.1);
   display: none;
   position: absolute;
   right: 0;
   top: 50%;
   line-height: 0;
-  color: rgba(255, 255, 255, 0.1);
   pointer-events: none;
   font-size: 25vw;
   -webkit-animation: flying-watermark-animation 20s;

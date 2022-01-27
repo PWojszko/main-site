@@ -20,6 +20,8 @@ h1 {
   font-size: 6.4rem;
   margin-bottom: 20px;
   color: $color0;
+  letter-spacing: 2px;
+  font-weight: normal;
 }
 
 h2 {
@@ -27,6 +29,7 @@ h2 {
   color: $color0;
   font-size: 4rem;
   letter-spacing: 2px;
+  font-weight: normal;
 }
 
 h3 {
@@ -34,4 +37,5 @@ h3 {
   color: $color0;
   font-size: 2em;
   letter-spacing: 2px;
+  font-weight: normal;
 }

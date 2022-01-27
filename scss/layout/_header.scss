@@ -1,5 +1,23 @@
 .header {
   height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
   padding: $section-padding;
+
+  background: linear-gradient(
+    0deg,
+    rgba($color1, 1) 0%,
+    rgba($color0, 0.05) 100%
+  );
+
+  .header__text {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
   @include watermark("header");
 }

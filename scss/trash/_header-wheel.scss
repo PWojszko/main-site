@@ -10,7 +10,6 @@
   max-height: 500px;
   transform: translate(-50%, -50%);
   opacity: 0;
-  @include hero-animation;
 
   .wheel__dot {
     position: absolute;

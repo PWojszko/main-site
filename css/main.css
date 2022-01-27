@@ -169,6 +169,8 @@ h1 {
   font-size: 6.4rem;
   margin-bottom: 20px;
   color: #c8c8c8;
+  letter-spacing: 2px;
+  font-weight: normal;
 }
 
 h2 {
@@ -176,6 +178,7 @@ h2 {
   color: #c8c8c8;
   font-size: 4rem;
   letter-spacing: 2px;
+  font-weight: normal;
 }
 
 h3 {
@@ -183,15 +186,34 @@ h3 {
   color: #c8c8c8;
   font-size: 2em;
   letter-spacing: 2px;
+  font-weight: normal;
 }
 
 .header {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
   padding: 40px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#0c0d16), to(rgba(200, 200, 200, 0.05)));
+  background: linear-gradient(0deg, #0c0d16 0%, rgba(200, 200, 200, 0.05) 100%);
   overflow: hidden;
   position: relative;
   -webkit-box-shadow: inset 0px -30px 30px -30px #000000;
           box-shadow: inset 0px -30px 30px -30px #000000;
+}
+
+.header .header__text {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .header::after {
@@ -496,16 +518,13 @@ h3 {
 }
 
 .header__gotobottom {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: relative;
   width: 200px;
   height: 200px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  margin: 4rem auto 0;
   z-index: 1;
-  -webkit-animation: appear-delayed 2.5s;
-          animation: appear-delayed 2.5s;
+  -webkit-animation: appear-delayed 1s;
+          animation: appear-delayed 1s;
 }
 
 .header__gotobottom .gotobottom__line {
@@ -594,81 +613,6 @@ h3 {
 .socials .socials__social .social__text {
   font-size: 2rem;
   line-height: 0;
-}
-
-.header__wheel {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50vw;
-  min-width: 250px;
-  max-width: 500px;
-  height: 50vw;
-  min-height: 250px;
-  max-height: 500px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  opacity: 0;
-  -webkit-animation: hero-animation-1, hero-animation-2;
-          animation: hero-animation-1, hero-animation-2;
-  -webkit-animation-duration: 2s, 2s;
-          animation-duration: 2s, 2s;
-  -webkit-animation-delay: 0s, 2s;
-          animation-delay: 0s, 2s;
-  -webkit-animation-iteration-count: 1, 1;
-          animation-iteration-count: 1, 1;
-  -webkit-animation-timing-function: cubic-bezier(0.69, 1.365, 0.74, -0.595), ease-out;
-          animation-timing-function: cubic-bezier(0.69, 1.365, 0.74, -0.595), ease-out;
-}
-
-.header__wheel .wheel__dot {
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  background: #c8c8c8;
-}
-
-.header__wheel .wheel__dot:nth-child(1) {
-  top: 14%;
-  left: 14%;
-}
-
-.header__wheel .wheel__dot:nth-child(2) {
-  top: 0%;
-  left: 50%;
-}
-
-.header__wheel .wheel__dot:nth-child(3) {
-  top: 14%;
-  left: 86%;
-}
-
-.header__wheel .wheel__dot:nth-child(4) {
-  top: 50%;
-  left: 0%;
-}
-
-.header__wheel .wheel__dot:nth-child(5) {
-  top: 50%;
-  left: 100%;
-}
-
-.header__wheel .wheel__dot:nth-child(6) {
-  top: 86%;
-  left: 14%;
-}
-
-.header__wheel .wheel__dot:nth-child(7) {
-  top: 100%;
-  left: 50%;
-}
-
-.header__wheel .wheel__dot:nth-child(8) {
-  top: 86%;
-  left: 86%;
 }
 
 .about {

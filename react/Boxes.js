@@ -2,10 +2,15 @@ const Boxes = (props) => {
   return (
     <section className="boxes">
       <div className="boxes__box">
-        <img src="images/box-1.jpg" alt="strona salonu fryzjerskiego" />
+        <img src="images/placeholder.jpg" alt="" />
         <div className="box__text">
-          <h2>Salon fryzjerski</h2>
-          <p>Pierwszy projekt stworzony w czystym PHP</p>
+          <h2>Lorem</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+            ipsum minus illo ratione vitae hic dicta, eius error, velit
+            distinctio labore, placeat doloremque nulla ut est? Dolores numquam
+            adipisci accusamus?
+          </p>
         </div>
       </div>
       <div className="boxes__box">
